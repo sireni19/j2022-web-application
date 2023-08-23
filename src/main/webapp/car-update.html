@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Updating</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Rubik:400,700'><link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="login-form">
+  <form action="cars" method="post"> <!--имя сервлета в action -->
+    <h1>Updating car</h1>
+    <div class="content">
+      <div class="input-field">
+        <input type="text" name ="id" value="0?" autocomplete="nope" readonly required><!--по name сервлет принимает параметры, которые отправляет html страница в него кнопкой submit т.к. в форме указана action-->
+      </div>
+      <div class="input-field">
+        <input type="text" name ="model" value="1?" autocomplete="new-password" required>
+      </div>
+      <div class="input-field">
+        <input type="text" name ="price" value="2?" autocomplete="new-password" required>
+      </div>
+      <div class="input-field">
+        <input type="text" name ="color" value="3?" autocomplete="new-password" required>
+      </div>
+      <input type="hidden" name="form" value="upd"/>
+    <div class="action">
+      <button type="submit" >Update Car</button>
+    </div>
+<!--    <div class="input-submit">-->
+<!--      <input type="submit" value="Login">-->
+<!--    </div>-->
+  </form>
+</div>
+<!-- partial -->
+  <script  src="js/script.js"></script>
+
+</body>
+</html>

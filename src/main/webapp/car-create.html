@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Updating</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Rubik:400,700'><link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="login-form">
+  <form action="cars" method="post"> <!--имя сервлета в action -->
+    <h1>New Car</h1>
+    <div class="content">
+      <div class="input-field">
+      <div class="input-field">
+        <input type="text" name ="model" placeholder="Model" autocomplete="new-password" required>
+      </div>
+      <div class="input-field">
+        <input type="text" name ="price" placeholder="Price" autocomplete="new-password" required>
+      </div>
+      <div class="input-field">
+        <input type="text" name ="color" placeholder="Color" autocomplete="new-password" required>
+      </div>
+        <input type="hidden" name="form" value="add"/>
+    <div class="action">
+      <button type="submit" >Add Car</button>
+    </div>
+<!--    <div class="input-submit">-->
+<!--      <input type="submit" value="Login">-->
+<!--    </div>-->
+  </form>
+</div>
+<!-- partial -->
+  <script  src="js/script.js"></script>
+
+</body>
+</html>
