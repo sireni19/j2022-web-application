@@ -41,9 +41,9 @@ public class RegistryServlet extends HttpServlet {
             boolean isCreated=DAO.createUser(newUser);
             if(isCreated){
                 String url="http://localhost:8080/j2022_web_application_war/activation?token="+(EncDecUtils.encrypt(newEmail));
-                String template= IOUtils.readFileWithBuff("D:\\IDEAProjects\\j2022-web-application\\src\\main\\webapp\\templates\\email_activation.html").replace("???",url);
+//                String template= IOUtils.readFileWithBuff("D:\\IDEAProjects\\j2022-web-application\\src\\main\\webapp\\templates\\email_activation.html").replace("???",url) ЭТО НЕ РАБОТАЕТ;
                 //template это email-activation.html только с a href=url
-                EmailUtils.sentEmail(newEmail.trim(),"Crazy Users App Activation",template);
+//                EmailUtils.sentEmail(newEmail.trim(),"Crazy Users App Activation",template) ЭТО НЕ РАБОТАЕТ;
                 includE(req,resp,"registration.html","Successfully registration, please check your email for activation");
             }else {
                 includE(req,resp,"registration.html","Oops! Some technical error. Try later");

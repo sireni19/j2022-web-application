@@ -78,7 +78,7 @@ public class EncDecUtils {
     public static void main(String[] args) throws NoSuchPaddingException, UnsupportedEncodingException, NoSuchAlgorithmException, IllegalBlockSizeException, BadPaddingException, InvalidAlgorithmParameterException, InvalidKeyException {
         EncDecUtils edUtils = new EncDecUtils();
         String pwd = "12345678";
-        String encValue = edUtils.encrypt(pwd);
+        String encValue = edUtils.encrypt("8fWu9BTlweWxvJjLbgVplw==");
         System.out.println("encrypted " + encValue);
         String origValue = edUtils.decrypt(encValue);
         System.out.println(origValue);
