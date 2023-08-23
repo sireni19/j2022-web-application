@@ -44,14 +44,16 @@ public class CarServlet extends HttpServlet {
         }
 
         List<Car> cars = DAO.getAllCars();
-        HTMLTableBuilder builder = new HTMLTableBuilder("CARS", true, cars.size(), 7, 1, 1, 1);
-        builder.addTableHeader("Id", "Model", "Price", "Color", "DELETE", "UPDATE", "<a href='/j2022_web_application_war/cars?action=create'>CREATE</a>");
+        HTMLTableBuilder builder = new HTMLTableBuilder("CARS", true, cars.size(), 6, 1, 1, 1);
+        builder.addTableHeader("Id", "Model", "Price", "Color", "DELETE", "UPDATE");
         for (Car c : cars) {
             builder.addRowValues(c.getId(), c.getModel(), c.getPrice(), c.getColor(), "<a href='/j2022_web_application_war/cars?action=delete&id=" + c.getId() + "'>DELETE</a>",
-                    "<a href='/j2022_web_application_war/cars?action=update&id=" + c.getId() + "'>UPDATE</a>", "");
+                    "<a href='/j2022_web_application_war/cars?action=update&id=" + c.getId() + "'>UPDATE</a>");
         }
         String table = builder.build();
-        resp.getWriter().println(table);
+        resp.getWriter().println(table+"<h1><a href='/j2022_web_application_war/cars?action=create'>CREATE</a></h1>");
+
+
     }
 
     @Override
@@ -81,6 +83,4 @@ public class CarServlet extends HttpServlet {
             }
         }
     }
-
-
 }
