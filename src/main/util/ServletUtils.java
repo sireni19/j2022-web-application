@@ -16,6 +16,10 @@ public class ServletUtils {
         RequestDispatcher dispatcher = req.getRequestDispatcher(path);
         dispatcher.forward(req, resp);
     }
+    public static void forwarDJSP(HttpServletRequest req, HttpServletResponse resp, String jspName) throws ServletException, IOException {
+        RequestDispatcher dispatcher = req.getRequestDispatcher("jsp/"+jspName+".jsp");
+        dispatcher.forward(req, resp);
+    }
 
     public static void includE(HttpServletRequest req, HttpServletResponse resp, String path, String message) throws ServletException, IOException {
         PrintWriter writer = resp.getWriter();
